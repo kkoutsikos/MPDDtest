@@ -1,0 +1,66 @@
+{
+    "input_dim_a": 512,
+    "embd_size_a": 128,
+    "embd_method_a": "maxpool",
+
+    "input_dim_v": 1000,
+    "embd_size_v": 128,
+    "embd_method_v": "maxpool",
+
+    "emo_output_dim": 5,
+
+    "cls_layers": "128,64",
+    "dropout_rate": 0.3,
+    "bn": true,
+    "ce_weight": 1.0,
+    "focal_weight": 1.0,
+    "temperature": 0.007,
+    "class_weights": [1.0, 1.0, 1.0],
+
+    "Transformer_head": 4,
+    "Transformer_layers": 3,
+    "hidden_size": 256,
+
+    "attention_head": 2,
+    "attention_dropout": 0.3,
+    
+    "activate_fun": "relu",
+    "ablation": "normal",
+    "use_ICL": true,
+    "drop_last": false,
+    "cvNo": 1,
+
+    "gpu_ids": [0],
+    "isTrain": true,
+    "checkpoints_dir": "./checkpoints",
+    "name": "MPDD_crossmodal",
+
+    "cuda_benchmark": true,
+    "lr": 0.0001,
+    "beta1": 0.9,
+
+    "log_dir": "./logs",
+    "feature_max_len": 26,
+
+    "fusion_type": "joint",
+    "model_type": "ourModelMPDDCross",
+    "use_personalized_feat": true,
+    "lr_policy": "linear",
+    "niter": 100,
+    "niter_decay": 100,
+    "epoch_count": 1,
+    "cross_d_model": 128,
+    "cross_nhead": 4,
+    "cross_num_layers": 1,
+    "cross_dropout": 0.5,
+    "personalized_dim": 1024,
+    "focal_gamma": 3.0,
+    "weight_decay": 0.0001,
+
+    
+    "augment_data": true,        
+    "noise_std": 0.05,             
+    "max_mask_time_ratio": 0.15,   
+    "max_mask_feat_ratio": 0.15   
+    
+}

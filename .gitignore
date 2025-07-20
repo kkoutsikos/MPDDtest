@@ -1,0 +1,9 @@
+*.pth
+*.log
+*.npy
+__pycache__/
+venv/
+checkpoints/
+logs/
+*.pyc
+.DS_Store
